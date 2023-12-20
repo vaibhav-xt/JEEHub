@@ -23,7 +23,7 @@ export default function Header() {
 
     return (
         <>
-            <header className='bg-dark-purple py-4 absolute w-screen top-0 z-50' style={{ color: 'white' }}>
+            <header className='bg-dark-purple py-4 absolute w-[100%] top-0 z-50 text-white'>
                 <div className='layout flex items-center justify-between '>
                     <h1 className='text-3xl'>JEE Hub</h1>
 
