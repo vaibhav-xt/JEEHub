@@ -17,7 +17,7 @@ export default function Home() {
 
         {/* Hero Section */}
         <section className="layout">
-          <div className="mt-24 min-h-[calc(100vh-40vh)] xl:min-h-[700px] flex flex-col-reverse sm:flex-col gap-16 md:flex-row justify-center md:justify-between md:items-center">
+          <div className="mt-24 min-h-[calc(100vh-40vh)] md:min-h-[600px] flex flex-col-reverse sm:flex-col gap-16 md:flex-row justify-center md:justify-between md:items-center">
             <div>
               <h1 className="text-3xl sm:text-4xl xl:text-6xl font-bold text-dark-purple">Elevate Your Scores <br />
                 with JEE Mastery <br />
