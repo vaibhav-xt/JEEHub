@@ -23,12 +23,12 @@ export default function Header() {
 
     return (
         <>
-            <header className='bg-dark-purple py-4 absolute w-[100%] top-0 z-50 text-white'>
+            <header className='bg-dark-purple py-4 fixed w-[100%] top-0 z-50 text-white shadow-md shadow-dark-purple'>
                 <div className='layout flex items-center justify-between '>
                     <h1 className='text-3xl'>JEE Hub</h1>
 
                     {/* Nav Links */}
-                    <nav className={`transition-all flex flex-col md:gap-8 md:flex-row absolute left-0 right-0 top-16 w-screen overflow-hidden ${displayNav ? 'h-auto p-4 border-t-2' : 'h-0'} bg-dark-purple gap-2 md:relative md:top-0 md:w-auto md:border-none`}>
+                    <nav className={`transition-all ease-in-out flex flex-col md:gap-8 md:flex-row absolute left-0 right-0 top-16 w-screen overflow-hidden shadow-md md:shadow-none shadow-dark-purple ${displayNav ? 'h-auto p-4 border-t-2' : 'h-0'} bg-dark-purple gap-2 md:relative md:top-0 md:w-auto md:border-none`}>
 
                         <p>
                             <a
@@ -71,7 +71,7 @@ export default function Header() {
                     </nav>
                     <div className='flex gap-4 items-center'>
                         <a
-                            className='bg-white w-20 h-8 text-dark-purple flex justify-center items-center font-bold rounded-md'
+                            className='bg-white w-20 h-8 text-dark-purple flex justify-center items-center font-bold rounded-md shadow-light-purple shadow-md'
                             href="/"
                             style={{ background: 'white' }}>
                             Sign Up
