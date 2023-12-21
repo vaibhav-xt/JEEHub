@@ -17,7 +17,7 @@ export default function Home() {
 
         {/* Hero Section */}
         <section className="layout">
-          <div className="mt-24 min-h-[calc(100vh-40vh)] xl:min-h-[calc(100vh-30vh)] flex flex-col-reverse sm:flex-col gap-16 md:flex-row justify-center md:justify-between md:items-center">
+          <div className="mt-24 min-h-[calc(100vh-40vh)] xl:min-h-[700px] flex flex-col-reverse sm:flex-col gap-16 md:flex-row justify-center md:justify-between md:items-center">
             <div>
               <h1 className="text-3xl sm:text-4xl xl:text-6xl font-bold text-dark-purple">Elevate Your Scores <br />
                 with JEE Mastery <br />
@@ -88,7 +88,7 @@ export default function Home() {
           <div className="flex flex-col gap-8 md:flex-row items-center justify-around my-32">
             <Image src={progress} alt="progress" className="max-w-[500px] w-full m-auto md:w-1/2" />
             <div className="md:w-1/2">
-              <h3 className="text-4xl font-bold text-dark-purple">Performance Analysis</h3>
+              <h3 className="text-3xl font-bold text-dark-purple">Performance Analysis</h3>
               <p className="pt-2">Pinpoint weaknesses effortlessly. Receive personalized insights to enhance your preparation. Elevate your understanding for targeted success in your exams.</p>
             </div>
           </div>
