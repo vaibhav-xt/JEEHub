@@ -7,6 +7,7 @@ import maths from '@/app/assets/maths-logo.svg'
 import physics from '@/app/assets/physics-logo.svg'
 import chemistry from '@/app/assets/chemistry-logo.svg'
 import progress from '@/app/assets/student-progress.png'
+import ScrollTop from "./components/ScrollTop";
 
 export default function Home() {
   return (
@@ -14,6 +15,8 @@ export default function Home() {
       {/* Home Page */}
       <Header />
       <main className="overflow-hidden">
+        {/* Top to Scroll */}
+        <ScrollTop />
 
         {/* Hero Section */}
         <section className="layout">
