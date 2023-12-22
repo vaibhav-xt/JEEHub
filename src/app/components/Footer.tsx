@@ -37,7 +37,6 @@ export default function Footer() {
                             <Link href="/" className="hover:text-light-purple"><i className="fa-brands fa-instagram"></i></Link>
                         </p>
                     </div>
-
                 </div>
             </footer>
         </>
