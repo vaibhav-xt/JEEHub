@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import bgImage from '../assets/header-wave.svg';
+import Link from 'next/link';
 
 export default function Header() {
     const pathname = usePathname();
@@ -25,57 +26,57 @@ export default function Header() {
         <>
             <header className='bg-dark-purple py-4 fixed w-[100%] top-0 z-50 text-white shadow-md shadow-dark-purple'>
                 <div className='layout flex items-center justify-between '>
-                    <h1 className='text-3xl'>JEE Hub</h1>
+                    <h1 className='text-3xl'><Link href="/">JEE Hub</Link></h1>
 
                     {/* Nav Links */}
                     <nav className={`transition-all ease-in-out flex flex-col md:gap-8 md:flex-row absolute left-0 right-0 top-16 w-screen overflow-hidden shadow-md md:shadow-none shadow-dark-purple ${displayNav ? 'h-auto p-4 border-t-2' : 'h-0'} bg-dark-purple gap-2 md:relative md:top-0 md:w-auto md:border-none`}>
 
                         <p>
-                            <a
+                            <Link
                                 href="/"
-                                className={`after:absolute  after:bg-light-purple after:h-[1.5px] after:rounded-lg after:left-0 after:mt-1 after:top-full after:hidden md:after:block ${pathname === '/' ? 'text-light-purple after:w-full' : 'after:w-0'} relative hover:text-light-purple`}>
+                                className={`${pathname === '/' ? 'text-light-purple after:w-full' : ''} relative hover:text-light-purple`}>
                                 Home
-                            </a>
+                            </Link>
                         </p>
 
                         <p>
-                            <a
+                            <Link
                                 href="/physics"
-                                className={`after:absolute  after:bg-light-purple after:h-[1.5px] after:rounded-lg after:left-0 after:mt-1 after:top-full after:hidden md:after:block ${pathname === '/physics' ? 'text-light-purple after:w-full' : 'after:w-0'} hover:text-light-purple`}>
+                                className={`${pathname === '/physics' ? 'text-light-purple after:w-full' : ''} hover:text-light-purple`}>
                                 Physics
-                            </a>
+                            </Link>
                         </p>
 
                         <p>
-                            <a
+                            <Link
                                 href="/chemistry"
-                                className={`after:absolute  after:bg-light-purple after:h-[1.5px] after:rounded-lg after:left-0 after:mt-1 after:top-full after:hidden md:after:block ${pathname === '/chemistry' ? 'text-light-purple after:w-full' : 'after:w-0'} hover:text-light-purple`}>
+                                className={`${pathname === '/chemistry' ? 'text-light-purple after:w-full' : ''} hover:text-light-purple`}>
                                 Chemistry
-                            </a>
+                            </Link>
                         </p>
 
                         <p>
-                            <a
+                            <Link
                                 href="/maths"
-                                className={`after:absolute  after:bg-light-purple after:h-[1.5px] after:rounded-lg after:left-0 after:mt-1 after:top-full after:hidden md:after:block ${pathname === '/maths' ? 'text-light-purple after:w-full' : 'after:w-0'} hover:text-light-purple`}>
+                                className={`${pathname === '/maths' ? 'text-light-purple after:w-full' : ''} hover:text-light-purple`}>
                                 Maths
-                            </a>
+                            </Link>
                         </p>
 
                         <p>
-                            <a
+                            <Link
                                 href="/">
                                 About Us
-                            </a>
+                            </Link>
                         </p>
                     </nav>
                     <div className='flex gap-4 items-center'>
-                        <a
+                        <Link
                             className='bg-white w-20 h-8 text-dark-purple flex justify-center items-center font-bold rounded-md shadow-light-purple shadow-md'
                             href="/"
                             style={{ background: 'white' }}>
                             Sign Up
-                        </a>
+                        </Link>
                         <span className='w-6 h-6 flex justify-center items-center md:hidden'>
                             <i className={`fa-solid ${displayNav ? 'fa-xmark' : 'fa-bars'}`} onClick={() => setDisplayNav((prev) => !prev)}></i>
                         </span>
