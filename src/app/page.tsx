@@ -8,6 +8,7 @@ import physics from '@/app/assets/physics-logo.svg'
 import chemistry from '@/app/assets/chemistry-logo.svg'
 import progress from '@/app/assets/student-progress.png'
 import ScrollTop from "./components/ScrollTop";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -98,40 +99,8 @@ export default function Home() {
         </section>
       </main>
 
-      {/* Footer Section */}
-      <Image src={upper} alt="background overlay" className="w-full" />
-      <footer className="bg-dark-purple pb-10">
-        <div className="layout text-white flex flex-wrap gap-16 justify-start">
-
-          <div className="sm:w-1/3">
-            <h5 className="text-2xl font-bold pb-4">About Us</h5>
-            <p>At Jee QuizHub, we are passionate about
-              revolutionizing your JEE Main & Advanced preparation.
-              Our mission is to provide a dynamic and interactive platform
-              where aspiring students can hone their skills,
-              master key concepts, and compete with peers.</p>
-          </div>
-
-          <div className="flex flex-col gap-2">
-            <h3 className="text-2xl font-bold">Subjects</h3>
-            <p className="font-extralight hover:text-light-purple"><a href="/physics">Physics</a></p>
-            <p className="font-extralight hover:text-light-purple"><a href="/chemistry">Chemistry</a></p>
-            <p className="font-extralight hover:text-light-purple"><a href="/Maths">Maths</a></p>
-            <p className="text-2xl font-normal pb-4 hover:text-light-purple"><a href="/">Progress <i className="fa-solid fa-up-right-from-square text-[15px]"></i></a></p>
-          </div>
-
-          <div>
-
-            <p className="text-2xl font-bold pb-2">Follow Us</p>
-            <p className="flex gap-2 text-2xl">
-              <a href="/" className="hover:text-light-purple"><i className="fa-brands fa-linkedin"></i></a>
-              <a href="/" className="hover:text-light-purple"><i className="fa-brands fa-x-twitter"></i></a>
-              <a href="/" className="hover:text-light-purple"><i className="fa-brands fa-instagram"></i></a>
-            </p>
-          </div>
-
-        </div>
-      </footer>
+      {/* Footer */}
+      <Footer />
     </>
   )
 }
