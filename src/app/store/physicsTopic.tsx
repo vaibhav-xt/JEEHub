@@ -1,5 +1,5 @@
 export const physicsTopics = [
-    "Physics and Measurement",
+    "Unit and Measurement",
     "Kinematics",
     "Laws of Motion",
     "Work, Energy and Power",
