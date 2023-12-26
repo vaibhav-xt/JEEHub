@@ -19,11 +19,7 @@ const NavLink = [
     {
         name: 'Math',
         link: '/math'
-    },
-    // {
-    //     name: 'About Us',
-    //     link: '/'
-    // }
+    }
 ]
 
 export default function Header() {
@@ -50,17 +46,38 @@ export default function Header() {
                     <h1 className='text-3xl'><Link href="/">JEE Hub</Link></h1>
 
                     {/* Nav Links */}
-                    <nav className={`transition-all ease-in-out flex flex-col md:gap-8 md:flex-row absolute left-0 right-0 top-16 w-screen overflow-hidden shadow-md md:shadow-none shadow-dark-purple ${displayNav ? 'h-auto p-4 border-t-2' : 'h-0'} bg-dark-purple gap-2 md:relative md:top-0 md:w-auto md:border-none`}>
-                        {
+                    <nav className={`transition-all ease-in-out flex flex-col md:gap-8 md:flex-row absolute left-0 right-0 top-16 w-screen overflow-hidden md:overflow-visible shadow-md md:shadow-none shadow-dark-purple ${displayNav ? 'h-auto p-4 border-t-2' : 'h-0'} bg-dark-purple gap-2 md:relative md:top-0 md:w-auto md:border-none`}>
+                        {/* {
                             NavLink.map((route) => (
                                 <p key={route.name}>
                                     <Link
                                         href={route.link}
-                                        className={`${pathname === route.link ? 'text-light-purple after:w-full' : ''} relative hover:text-light-purple`}>
+                                        className={`${pathname === route.link ? 'text-light-purple' : ''} relative hover:text-light-purple`}>
                                         {route.name}
                                     </Link>
-                                </p>))
-                        }
+                                </p>)
+                            )
+                        } */}
+
+                        <p>
+                            <Link
+                                href='/'
+                                className={`${pathname === '/' ? 'text-light-purple' : ''} hover:text-light-purple`}>
+                                Home
+                            </Link>
+                        </p>
+                        <p className='group'>
+                            <Link
+                                href=""
+                                className="group-hover:text-light-purple hover:text-light-purple">
+                                Quizzes <i className="group-hover:rotate-180 fa-solid fa-caret-down"></i>
+                            </Link>
+                            <ul className='relative md:absolute flex overflow-hidden h-0 group-hover:h-auto z-40  bg-white text-dark-purple group-hover:p-4 flex-col gap-1 rounded-xl'>
+                                <li className={`px-2 py-1 border-b-2 hover:bg-light-purple ${pathname === "/physics-quiz" ? "bg-light-purple" : "bg-white"}`}><Link href="/physics-quiz">Physics</Link></li>
+                                <li className={`px-2 py-1 border-b-2 hover:bg-light-purple ${pathname === "/physics-quiz" ? "bg-light-purple" : "bg-white"}`}><Link href="/chemsitry-quiz">Chemistry</Link></li>
+                                <li className={`px-2 py-1 border-b-2 hover:bg-light-purple ${pathname === "/physics-quiz" ? "bg-light-purple" : "bg-white"}`}><Link href="/maths-quiz">Chemistry</Link></li>
+                            </ul>
+                        </p>
                     </nav>
                     <div className='flex gap-4 items-center'>
                         <Link
