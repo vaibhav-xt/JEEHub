@@ -10,7 +10,13 @@ const config: Config = {
     colors: {
       'dark-purple': '#3E0552',
       'light-purple': '#D0BCD7',
-      'white': '#FFF'
+      'white': '#FFF',
+      'black': "rgba(0, 0, 0, 0.5)",
+      'light-white': '#707070',
+      'orange': '#f07252',
+      'dark-green': '#008000',
+      'light-green': '#60cc8e',
+      'red': '#ff0000',
     }
   },
   plugins: [],

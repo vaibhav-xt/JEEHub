@@ -32,7 +32,7 @@ export default function ScrollTop() {
     return (
         showButton && (
             <div
-                className="transition-all fixed bg-dark-purple text-white w-10 h-10 z-50 bottom-10 right-10 flex justify-center items-center rounded-md border-2 cursor-pointer hover:bg-white hover:text-dark-purple active:scale-90"
+                className="transition-all fixed bg-dark-purple text-white w-10 h-10 z-40 bottom-10 right-10 flex justify-center items-center rounded-md border-2 cursor-pointer hover:bg-white hover:text-dark-purple active:scale-90"
                 onClick={scrollToTop}
             >
                 <i className="fa-solid fa-angles-up"></i>

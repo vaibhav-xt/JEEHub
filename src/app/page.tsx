@@ -9,12 +9,15 @@ import chemistry from '@/app/assets/chemistry-logo.svg'
 import progress from '@/app/assets/student-progress.png'
 import ScrollTop from "./components/ScrollTop";
 import Footer from "./components/Footer";
+import QuizInstruction from "./components/QuizInstruction";
 
 export default function Home() {
   return (
     <>
+
       {/* Home Page */}
       <Header />
+      <QuizInstruction />
       <main className="overflow-hidden">
         {/* Top to Scroll */}
         <ScrollTop />
