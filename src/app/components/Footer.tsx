@@ -9,7 +9,7 @@ export default function Footer() {
             {/* Footer Section */}
             <Image src={upper} alt="background overlay" className="w-full" />
             <footer className="bg-dark-purple pb-10">
-                <div className="layout text-white flex flex-wrap gap-16 justify-start">
+                <div className="layout text-white flex flex-wrap gap-16 justify-between">
 
                     <div className="sm:w-1/3">
                         <h5 className="text-2xl font-bold pb-4">About Us</h5>
@@ -29,7 +29,6 @@ export default function Footer() {
                     </div>
 
                     <div>
-
                         <p className="text-2xl font-bold pb-2">Follow Us</p>
                         <p className="flex gap-2 text-2xl">
                             <Link href="/" className="hover:text-light-purple"><i className="fa-brands fa-linkedin"></i></Link>

@@ -45,26 +45,26 @@ export default function Home() {
               <h3 className="text-3xl pb-4 font-bold text-center xl:text-start">Subject Based Quizzes</h3>
               <div className="flex flex-row gap-4 xl:flex-col justify-center flex-wrap">
 
-                <div className="max-w-[320px] w-full bg-white rounded-xl text-dark-purple flex justify-around items-center p-2 shadow-light-purple shadow-md">
+                <div className="max-w-[320px] w-full bg-white rounded-xl text-dark-purple flex justify-around items-center shadow-light-purple shadow-md">
                   <Image src={physics} alt="physics" className="w-1/3" />
                   <div className="w-1/2 relative">
-                    <p className="text-3xl font-bold">Physics</p>
+                    <p className="text-xl font-bold">Physics</p>
                     <a href="/physics" className="absolute right-0 -bottom-8 hover:underline">click here {">>"}</a>
                   </div>
                 </div>
 
-                <div className="max-w-[320px] w-full bg-white rounded-xl text-dark-purple flex justify-around items-center p-2 shadow-light-purple shadow-md">
+                <div className="max-w-[320px] w-full bg-white rounded-xl text-dark-purple flex justify-around items-center shadow-light-purple shadow-md">
                   <Image src={chemistry} alt="chemistry" className="w-1/3" />
                   <div className="w-1/2 relative">
-                    <p className="text-3xl font-bold">Chemistry</p>
+                    <p className="text-xl font-bold">Chemistry</p>
                     <a href="/chemistry" className="absolute right-0 -bottom-8 hover:underline">click here {">>"}</a>
                   </div>
                 </div>
 
-                <div className="max-w-[320px] w-full bg-white rounded-xl text-dark-purple flex justify-around items-center p-2 shadow-light-purple shadow-md">
+                <div className="max-w-[320px] w-full bg-white rounded-xl text-dark-purple flex justify-around items-center shadow-light-purple shadow-md">
                   <Image src={maths} alt="maths" className="w-1/3" />
                   <div className="w-1/2 relative">
-                    <p className="text-3xl font-bold">Maths</p>
+                    <p className="text-xl font-bold">Maths</p>
                     <a href="/maths" className="absolute right-0 -bottom-8 hover:underline">click here {">>"}</a>
                   </div>
                 </div>
@@ -73,13 +73,13 @@ export default function Home() {
 
             <div className="flex flex-col gap-4">
               <h3 className="text-3xl font-bold text-center">Why Choose Us?</h3>
-              <ul className="rounded-xl flex flex-col text-white gap-4 max-w-[600px] w-full m-auto">
-                <li className="border-b-2 text-xl bg-white text-dark-purple rounded-lg p-4 shadow-light-purple shadow-md">Dynamic quizzes aligned with the latest exam patterns.</li>
-                <li className="border-b-2 text-xl bg-white text-dark-purple rounded-lg p-4 shadow-light-purple shadow-md">Compete with others to enhance your competitive edge.</li>
-                <li className="border-b-2 text-xl bg-white text-dark-purple rounded-lg p-4 shadow-light-purple shadow-md">Master concepts through interactive learning.</li>
-                <li className="border-b-2 text-xl bg-white text-dark-purple rounded-lg p-4 shadow-light-purple shadow-md">Personalized feedback to enhance your strengths.</li>
-                <li className="border-b-2 text-xl bg-white text-dark-purple rounded-lg p-4 shadow-light-purple shadow-md">Track your progress and boost your confidence.</li>
-                {/* <li className="border-b-2 text-xl bg-white text-dark-purple rounded-lg p-4">Convenient, accessible, and designed for your success.</li> */}
+              <ul className="rounded-xl flex flex-col text-white gap-4 max-w-[600px] w-full m-auto text-sm md:text-md">
+                <li className="border-b-2 bg-white text-dark-purple rounded-lg p-4 shadow-light-purple shadow-md">Dynamic quizzes aligned with the latest exam patterns.</li>
+                <li className="border-b-2 bg-white text-dark-purple rounded-lg p-4 shadow-light-purple shadow-md">Compete with others to enhance your competitive edge.</li>
+                <li className="border-b-2 bg-white text-dark-purple rounded-lg p-4 shadow-light-purple shadow-md">Master concepts through interactive learning.</li>
+                <li className="border-b-2 bg-white text-dark-purple rounded-lg p-4 shadow-light-purple shadow-md">Personalized feedback to enhance your strengths.</li>
+                <li className="border-b-2 bg-white text-dark-purple rounded-lg p-4 shadow-light-purple shadow-md">Track your progress and boost your confidence.</li>
+                {/* <li className="border-b-2 bg-white text-dark-purple rounded-lg p-4">Convenient, accessible, and designed for your success.</li> */}
               </ul>
             </div>
 
@@ -92,7 +92,7 @@ export default function Home() {
           <div className="flex flex-col gap-8 md:flex-row items-center justify-around my-32">
             <Image src={progress} alt="progress" className="max-w-[500px] w-full m-auto md:w-1/2" />
             <div className="md:w-1/2">
-              <h3 className="text-3xl font-bold text-dark-purple">Performance Analysis</h3>
+              <h3 className="text-xl font-bold text-dark-purple">Performance Analysis</h3>
               <p className="pt-2">Pinpoint weaknesses effortlessly. Receive personalized insights to enhance your preparation. Elevate your understanding for targeted success in your exams.</p>
             </div>
           </div>
