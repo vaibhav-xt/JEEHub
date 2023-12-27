@@ -1,3 +1,5 @@
+'use client'
+import { useState } from "react";
 import Image from "next/image";
 import Header from "./components/Header";
 import hero from './assets/hero.svg'
@@ -12,12 +14,14 @@ import Footer from "./components/Footer";
 import QuizInstruction from "./components/QuizInstruction";
 
 export default function Home() {
+  const [rulesDisplayFlag, setRulesDisplayFlag] = useState(false)
+
   return (
     <>
 
       {/* Home Page */}
       <Header />
-      <QuizInstruction />
+      <QuizInstruction rulesDisplay={rulesDisplayFlag} setRulesDisplay={setRulesDisplayFlag} />
       <main className="overflow-hidden">
         {/* Top to Scroll */}
         <ScrollTop />
@@ -52,7 +56,7 @@ export default function Home() {
                   <Image src={physics} alt="physics" className="w-1/3" />
                   <div className="w-1/2 relative">
                     <p className="text-xl font-bold">Physics</p>
-                    <a href="/physics" className="absolute right-0 -bottom-8 hover:underline">click here {">>"}</a>
+                    <button className="absolute right-0 -bottom-8 hover:underline" onClick={() => setRulesDisplayFlag(true)}>click here {">>"}</button>
                   </div>
                 </div>
 
@@ -60,7 +64,7 @@ export default function Home() {
                   <Image src={chemistry} alt="chemistry" className="w-1/3" />
                   <div className="w-1/2 relative">
                     <p className="text-xl font-bold">Chemistry</p>
-                    <a href="/chemistry" className="absolute right-0 -bottom-8 hover:underline">click here {">>"}</a>
+                    <button className="absolute right-0 -bottom-8 hover:underline" onClick={() => setRulesDisplayFlag(true)}>click here {">>"}</button>
                   </div>
                 </div>
 
@@ -68,7 +72,7 @@ export default function Home() {
                   <Image src={maths} alt="maths" className="w-1/3" />
                   <div className="w-1/2 relative">
                     <p className="text-xl font-bold">Maths</p>
-                    <a href="/maths" className="absolute right-0 -bottom-8 hover:underline">click here {">>"}</a>
+                    <button className="absolute right-0 -bottom-8 hover:underline" onClick={() => setRulesDisplayFlag(true)}>click here {">>"}</button>
                   </div>
                 </div>
               </div>

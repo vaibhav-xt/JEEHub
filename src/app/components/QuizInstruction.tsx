@@ -1,8 +1,15 @@
-import React from 'react'
+'use client'
+import Link from 'next/link';
+import React, { Dispatch, SetStateAction } from 'react'
 
-export default function QuizInstruction() {
+interface QuizInstructionProps {
+    rulesDisplay: boolean;
+    setRulesDisplay?: Dispatch<SetStateAction<boolean>>;
+}
+
+export default function QuizInstruction({ rulesDisplay, setRulesDisplay }: QuizInstructionProps) {
     return (
-        <div className='fixed top-0 left-0 w-full h-full bg-black z-50'>
+        <div className={`fixed top-0 ${rulesDisplay ? 'right-0' : '-right-full'} w-full h-full bg-black z-50`}>
             <div className='bg-light-purple p-4 md:p-8 w-full h-full md:ml-[10%] md:w-[90%] overflow-auto custom-scrollbar'>
                 <h4 className='text-xl font-bold'>Instruction</h4>
                 <h5 className='text-md font-bold pt-4'>Please read the instruction carefully</h5>
@@ -69,8 +76,8 @@ export default function QuizInstruction() {
                     </li>
                 </ul>
                 <div className='flex gap-4'>
-                    <button className='px-4 py-2 bg-dark-purple text-white border-2 border-dark-purple hover:bg-light-purple hover:text-dark-purple'>Start</button>
-                    <button className='px-4 py-2 bg-dark-purple text-white border-2 border-dark-purple hover:bg-light-purple hover:text-dark-purple'>Cancel</button>
+                    <Link href="quiz-test" className='px-4 py-2 bg-dark-purple text-white border-2 border-dark-purple hover:bg-light-purple hover:text-dark-purple'>Start</Link>
+                    <button className='px-4 py-2 bg-dark-purple text-white border-2 border-dark-purple hover:bg-light-purple hover:text-dark-purple' onClick={() => setRulesDisplay(false)}>Cancel</button>
                 </div>
             </div>
 
