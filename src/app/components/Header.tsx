@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
+import QuizInstruction from './QuizInstruction';
 
 const NavLink = [
     {
@@ -25,6 +26,7 @@ const NavLink = [
 export default function Header() {
     const pathname = usePathname();
     const [displayNav, setDisplayNav] = useState(false);
+    const [rulesDisplayFlag, setRulesDisplayFlag] = useState(false)
 
     useEffect(() => {
         // Function to handle window resize event
@@ -42,6 +44,7 @@ export default function Header() {
     return (
         <>
             <header className='bg-dark-purple py-4 fixed w-[100%] top-0 z-50 text-white shadow-md shadow-dark-purple'>
+                <QuizInstruction rulesDisplay={rulesDisplayFlag} setRulesDisplay={setRulesDisplayFlag} />
                 <div className='layout flex items-center justify-between '>
                     <h1 className='text-3xl'><Link href="/">JEE Hub</Link></h1>
 
@@ -73,16 +76,16 @@ export default function Header() {
                                 Quizzes <i className="group-hover:rotate-180 fa-solid fa-caret-down"></i>
                             </Link>
                             <ul className='relative md:absolute flex overflow-hidden h-0 group-hover:h-auto z-40  bg-white text-dark-purple group-hover:p-4 flex-col gap-1 rounded-xl'>
-                                <li className={`px-2 py-1 border-b-2 hover:bg-light-purple ${pathname === "/physics-quiz" ? "bg-light-purple" : "bg-white"}`}><Link href="/physics-quiz">Physics</Link></li>
-                                <li className={`px-2 py-1 border-b-2 hover:bg-light-purple ${pathname === "/physics-quiz" ? "bg-light-purple" : "bg-white"}`}><Link href="/chemsitry-quiz">Chemistry</Link></li>
-                                <li className={`px-2 py-1 border-b-2 hover:bg-light-purple ${pathname === "/physics-quiz" ? "bg-light-purple" : "bg-white"}`}><Link href="/maths-quiz">Chemistry</Link></li>
+                                <li className={`px-2 py-1 border-b-2 hover:bg-light-purple ${pathname === "/physics-quiz" ? "bg-light-purple" : "bg-white"} cursor-pointer`} onClick={() => setRulesDisplayFlag(true)}><span >Physics</span></li>
+                                <li className={`px-2 py-1 border-b-2 hover:bg-light-purple ${pathname === "/physics-quiz" ? "bg-light-purple" : "bg-white"} cursor-pointer`} onClick={() => setRulesDisplayFlag(true)}><span>Chemistry</span></li>
+                                <li className={`px-2 py-1 border-b-2 hover:bg-light-purple ${pathname === "/physics-quiz" ? "bg-light-purple" : "bg-white"} cursor-pointer`} onClick={() => setRulesDisplayFlag(true)}><span>Maths</span></li>
                             </ul>
                         </p>
                     </nav>
                     <div className='flex gap-4 items-center'>
                         <Link
                             className='bg-white w-20 h-8 text-dark-purple flex justify-center items-center font-bold rounded-md shadow-light-purple shadow-md'
-                            href="/"
+                            href="/signup"
                             style={{ background: 'white' }}>
                             Sign Up
                         </Link>

@@ -1,6 +1,6 @@
 'use client'
 import Link from 'next/link';
-import React, { Dispatch, SetStateAction } from 'react'
+import React, { Dispatch, SetStateAction, useEffect } from 'react'
 
 interface QuizInstructionProps {
     rulesDisplay: boolean;
@@ -8,6 +8,15 @@ interface QuizInstructionProps {
 }
 
 export default function QuizInstruction({ rulesDisplay, setRulesDisplay }: QuizInstructionProps) {
+
+    useEffect(() => {
+        // Check if setRulesDisplay is defined before using it
+        if (setRulesDisplay) {
+            return () => setRulesDisplay(false);
+        }
+    }, []);
+
+
     return (
         <div className={`fixed top-0 ${rulesDisplay ? 'right-0' : '-right-full'} w-full h-full bg-black z-50`}>
             <div className='bg-light-purple p-4 md:p-8 w-full h-full md:ml-[10%] md:w-[90%] overflow-auto custom-scrollbar'>
